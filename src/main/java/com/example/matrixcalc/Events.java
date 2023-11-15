@@ -16,7 +16,9 @@ import java.util.List;
 
 public class Events {
 
-    //Функция создания диалогового окна для вывода ошибки
+    /**
+     * Функция создания диалогового окна для вывода ошибки
+     */
 
     static void error(String text){
         Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -26,7 +28,9 @@ public class Events {
         alert.showAndWait();
     }
 
-    //Функция чтения матрицы с csv файла
+    /**
+     * Функция чтения матрицы с csv файла
+     */
 
     static void eddMatrix(Label lable,List<List<Integer>> data){
         try {
@@ -74,7 +78,9 @@ public class Events {
 
     }
 
-    // Вспомогательная функция для получения минора матрицы
+    /**
+     * Вспомогательная функция для получения минора матрицы
+     */
 
     public static List<List<Integer>> getMinorMatrix(List<List<Integer>> matrix, int row, int column) {
         List<List<Integer>> minorMatrix = new ArrayList<>();
@@ -96,7 +102,9 @@ public class Events {
         return minorMatrix;
     }
 
-    //Функция расчёта определителя на основе минора
+    /**
+     * Функция расчёта определителя на основе минора
+     */
     public static int calculateDeterminant(List<List<Integer>> matrix) {
         int rows = matrix.size();
         int columns = matrix.get(0).size();
@@ -116,8 +124,9 @@ public class Events {
         return determinant;
     };
 
-    // Вспомогательная функция для вывода матрицы
-
+    /**
+     * Вспомогательная функция для вывода матрицы
+     */
     public static void printMatrix(List<List<Integer>> matrix,Label label) {
         String matrixdata ="";
         for (List<Integer> row : matrix) {

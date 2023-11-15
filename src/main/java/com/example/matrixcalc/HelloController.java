@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-//test
 
 public class HelloController {
     private static final Logger logger = LogManager.getLogger(HelloController.class.getName());
@@ -62,10 +61,15 @@ public class HelloController {
 
     //Описание функций кнопок
 
+    /**
+     * Функция инициализации функций кнопок приложения
+     */
     @FXML
     void initialize() {
 
-        //Функция сложения матриц
+        /**
+         * Функция сложения матриц m1 и m2,состоящих из данных data1 и data2
+         */
 
         plus.setOnAction(event -> {
             if (data1.isEmpty() || data2.isEmpty()){
@@ -89,7 +93,9 @@ public class HelloController {
             }
         });
 
-        //Функция вычитания матриц
+        /**
+         * Функция вычитания матриц m1 и m2,состоящих из данных data1 и data2
+         */
 
         minus.setOnAction(event ->{
             if (data1.isEmpty() || data2.isEmpty()){
@@ -113,7 +119,9 @@ public class HelloController {
             }
         });
 
-        //Функция умножения матриц
+        /**
+         * Функция умножения матриц m1 и m2,состоящих из данных data1 и data2
+         */
 
         multi.setOnAction(event ->{
             if (data1.isEmpty() || data2.isEmpty()){
@@ -148,7 +156,9 @@ public class HelloController {
             }
         });
 
-        //Функция ввода первой матрицы из csv файла
+        /**
+         * Получение матрицы m1 ,состоящей из данных data1
+         */
 
         choose1.setOnAction(event ->{
             Events.eddMatrix(m1,data1);
@@ -156,7 +166,9 @@ public class HelloController {
             logger.info("Загружена первая матрица");
         });
 
-        //Функция ввода второй матрицы из csv файла
+        /**
+         * Получение матрицы m2 ,состоящей из данных data2
+         */
 
         choose2.setOnAction(event ->{
             Events.eddMatrix(m2,data2);
@@ -164,7 +176,9 @@ public class HelloController {
             logger.info("Загружена вторая матрица");
         });
 
-        //Функция расчёта определителя первой матрицы
+        /**
+         * Расчёт определителя матрицы m1
+         */
 
         opred1.setOnAction(event ->{
             if (data1.isEmpty()){
@@ -177,7 +191,9 @@ public class HelloController {
                 opred1text.setText(String.valueOf(Events.calculateDeterminant(data1)));}
         });
 
-        //Функция расчёта определителя второй матрицы
+        /**
+         * Расчёт определителя матрицы m2
+         */
 
         opred2.setOnAction(event ->{
             if (data2.isEmpty()){

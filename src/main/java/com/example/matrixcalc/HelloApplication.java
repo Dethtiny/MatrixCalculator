@@ -1,4 +1,7 @@
 package com.example.matrixcalc;
+/**
+ * @author UshkalovNikita
+ */
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
