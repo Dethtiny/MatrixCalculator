@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+package com/example/matrixcalc{
+    class HelloApplication extends Application{
+        }
+class Hello
+@enduml
