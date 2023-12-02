@@ -1,0 +1,36 @@
+@startuml
+class com.example.matrixcalc.HelloApplication {
++ void start(Stage)
++ {static} void main(String[])
+}
+class com.example.matrixcalc.Events {
+~ {static} void error(String)
+~ {static} void eddMatrix(Label,List<List<Integer>>)
++ {static} List<List<Integer>> getMinorMatrix(List<List<Integer>>,int,int)
++ {static} int calculateDeterminant(List<List<Integer>>)
++ {static} void printMatrix(List<List<Integer>>,Label)
+}
+class com.example.matrixcalc.HelloController {
+- {static} Logger logger
+~ List<List<Integer>> data1
+~ List<List<Integer>> data2
+- ResourceBundle resources
+- URL location
+- Button choose1
+- Button choose2
+- Button minus
+- Button multi
+- Button opred1
+- Button opred2
+- Label m1
+- Label m2
+- Label m3
+- Label opred1text
+- Label opred2text
+- Button plus
+~ void initialize()
+}
+
+
+javafx.application.Application <|-- com.example.matrixcalc.HelloApplication
+@enduml

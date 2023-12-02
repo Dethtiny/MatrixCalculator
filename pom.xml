@@ -10,6 +10,7 @@
     <name>MatrixCalc</name>
 
     <properties>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.9.2</junit.version>
     </properties>
@@ -53,12 +54,21 @@
         <dependency>
             <groupId>ch.qos.reload4j</groupId>
             <artifactId>reload4j</artifactId>
-            <version>1.2.17</version>
+            <version>1.2.25</version>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.0</version> <!-- Обновленная версия плагина -->
+                <!-- Остальные конфигурации плагина -->
+            </plugin>
+
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -77,13 +87,13 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.matrixcalc/com.example.matrixcalc.HelloApplication</mainClass>
+                            <mainClass>com.example.matrixcalc.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
                             <noManPages>true</noManPages>
                             <stripDebug>true</stripDebug>
-                            <noHeaderFiles>true</noHeaderFiles>
+                            <noHeaderFiles>false</noHeaderFiles>
                         </configuration>
                     </execution>
                 </executions>
